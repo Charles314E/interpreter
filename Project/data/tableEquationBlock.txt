@@ -1,0 +1,7 @@
+OPENING STATE 1
+Expression = g3
+Equation = r1
+
+STATE 3
+EndOfFile = a
+

@@ -1,0 +1,16 @@
+OPENING STATE 1
+Null = r3
+Expression = g3
+List = g10, r1
+
+STATE 16
+Null = r3
+Expression = r2
+List = r1
+
+STATE 10
+Comma = s16
+
+STATE 3
+EndOfFile = a
+

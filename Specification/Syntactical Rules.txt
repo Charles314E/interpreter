@@ -1,0 +1,107 @@
+NOTE: 'TOKEN_NAME' refers to lexical token, whereas 'TokenName' refers to a non-terminal parser token. The lexical tokens that symbols represent can be referenced in
+'Aliases.txt'.
+
+Phrase (END OF PARSING)		->  	Phrase   	$
+Phrase 				-> 	Phrase   	Phrase 
+Phrase 				->  	Statement   	;
+
+Statement   			->	MethodCall 
+Statement   			->	AssignmentStatement 
+Statement   			->	ConditionalTree 
+Statement   			->	LoopStatement 
+Statement   			->	MethodDefinition 
+Statement   			->	ReturnStatement 
+
+IfHeader   			->	IF 	( 	Equation 	) 
+IfStatement   			->	IfHeader 	EnclosedPhrase 
+ElseIfHeader   			->	ELSE 	IF	( 	Equation 	) 
+ElseIfStatement   		->	ElseIfHeader	EnclosedPhrase 
+ElseStatement   		->	ELSE EnclosedPhrase 
+Conditional   			->	ElseIfStatement 
+Conditional   			->	Conditional 	Conditional 
+ConditionalTree   		->	IfStatement	Conditional 
+ConditionalTree   		->	ConditionalTree		ElseStatement 
+ConditionalTree   		->	IfStatement	ElseStatement 
+ConditionalTree   		->	IfStatement 
+
+WhileHeader   			->	WHILE	(	Equation	) 
+WhileLoop   			->	WhileHeader	EnclosedPhrase 
+
+ForHeader   			->	FOR	(	VAR	IDENTIFIER	=	Iterator	) 
+ForLoop   			->	ForHeader	EnclosedPhrase 
+
+Iterator   			->	Expression	...	Expression 
+Iterator   			->	Array 
+
+LoopStatement   		->	WhileLoop 
+LoopStatement   		->	ForLoop 
+
+EnclosedPhrase   		->	{	 Phrase		} 
+
+Argument   			->	VAR    	 IDENTIFIER
+ReturnStatement   		->	RETURN	 Expression 
+MethodHeader   			->	DEF	 IDENTIFIER 	(   	Arguments   	) 
+MethodDefinition   		->	MethodHeader   	EnclosedPhrase 
+Arguments   			->	Arguments   	,   	Arguments 
+Arguments   			->	Argument 
+MethodCall   			->	Name		(   	  List   	) 
+List   				->	List   	 	,   	  List 
+List   				->	Expression 
+Array   			->	[   	  List   	] 
+Attribute   			->	IDENTIFIER	.  	  IDENTIFIER
+Item   				->	Name	 [   	Expression   	] 
+
+Assignee   			->	Expression 
+AssignmentStatement   		->	VAR	 Variable   	=  	 Assignee 
+
+Equation   			->	EqualsStatement 
+EqualsStatement   		->	Expression   	==   	Expression 
+
+Equation   			->	NotEqualsStatement 
+NotEqualsStatement   		->	Expression   	!=   	Expression 
+
+Equation   			->	LessThanStatement 
+LessThanStatement   		->	Expression   	<   	Expression 
+
+Equation   			->	GreaterThanStatement 
+GreaterThanStatement   		->	Expression   	>  	Expression 
+
+Equation   			->	LessThanOrEqualsStatement 
+LessThanOrEqualsStatement   	->	Expression   	<= 	Expression 
+
+Equation   			->	GreaterThanOrEqualsStatement 
+GreaterThanOrEqualsStatement   	->	Expression   	>=   	Expression 
+
+Name   				->	IDENTIFIER
+Name   				->	Attribute 
+Variable   			->	Name 
+Variable   			->	Item 
+Expression   			->	MethodCall 
+Expression   			->	Variable 
+Expression   			->	INTEGER
+Expression   			->	REAL
+Expression   			->	BOOLEAN
+Expression   			->	STRING
+Expression   			->	NULL
+Expression   			->	Operator 
+Expression   			->	Equation 
+Expression   			->	Array 
+Expression   			->	(   	Expression   	) 
+
+Operator   			->	PlusOperator 
+PlusOperator   			->	Expression   	+   	Expression 
+
+Operator   			->	MinusOperator 
+MinusOperator   		->	Expression   	-   	Expression 
+
+Operator   			->	MultiplyOperator 
+MultiplyOperator   		->	Expression  	*	Expression 
+
+Operator   			->	DivisionOperator 
+DivisionOperator   		->	Expression   	/	Expression 
+
+Operator   			->	ExponentOperator 
+ExponentOperator   		->	POWER	(   Expression   ,   Expression   )
+
+Operator   			->	ModulusOperator 
+ModulusOperator   		->	Expression	%	Expression 

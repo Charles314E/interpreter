@@ -1,0 +1,60 @@
+Equation Symbol
+   SHAPE: Circle
+   SLOTS:
+    - Left    : Circular      : can hold an Expression
+    - Right   : Circular      : can hold an Expression
+   INCLUDES:
+    - Equals
+    - Not Equals
+    - Less Than
+    - More Than
+    - Less Than Equals
+    - More Than Equals
+
+
+Operator Symbol
+   SHAPE: Circle
+   SLOTS:
+    - Left    : Circular      : can hold an Expression
+    - Right   : Circular      : can hold an Expression
+   INCLUDES:
+    - Plus
+    - Minus
+    - Multiply
+    - Divide
+    - Exponent
+    - Modulo
+
+
+Value Block (Has editable text)
+   SHAPE: Rectangle with rounded depressions in each side
+   SLOTS:
+    - Left    : Straight Edge :
+    - Right   : Straight Edge :
+    - Left    : Circle Slot   : can hold an Operator or Equation
+    - Right   : Circle Slot   : can hold an Operator or Equation
+   INCLUDES:
+    - Identifier (Created from an IDENTIFIER lexical verification)
+    - String (Created from a STRING lexical verification)
+    - Integer (Created from an INTEGER lexical verification)
+    - Float (Created from a REAL lexical verification)
+    - Boolean (Created from a BOOLEAN lexical verification)
+    - Null (Created from either an empty field or a NULL lexical verification)
+
+
+Method Name Block (Has editable text - can only hold an IDENTIFIER string)
+   SHAPE: Elongated round tab with a rounded depression on the left side
+   SLOTS:
+    - Right   : Circular      : can hold an Expression
+    - Bottom  : Hanger Slot   : 
+
+
+Header Block
+   SHAPE: Elongated round tab
+   SLOTS:
+    - Right   : Circular      : can hold an Expression
+    - Bottom  : Hanger Slot   : 
+    - Bottom  : Coat Hanger   : can hold a Statement
+   INCLUDES:
+    - If Header
+    - While Header

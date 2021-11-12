@@ -1,0 +1,6 @@
+print(50);
+var a = n[50];
+if ([5 - (500 + 50), a] == [10]) {
+    return true;
+};
+return false;

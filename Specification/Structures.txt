@@ -1,0 +1,150 @@
+EXPRESSIONS:
+
+   VALUES:
+
+      Identifier:
+         USAGE: Used to store and reference values in the interpreter's memory.
+         EXAMPLE: a50
+
+      String:
+         NOTE: Single qoutes mustr be wrapped around the text for it to be considered a string. Double quotes will not work.
+         USAGE: Defines a string of text.
+         EXAMPLE: 'Hello World!'
+
+      Integer:
+         USAGE: Defines a positive or negative whole number value.
+         EXAMPLE: 616
+
+      Float:
+         USAGE: Defines a positive or negative fractional number value.
+         EXAMPLE: 24.82
+
+      Boolean:
+         USAGE: Defines a binary true or false value.
+         EXAMPLE: true
+
+      Null:
+         USAGE: Defines an empty value.
+         EXAMPLE: null
+
+   OPERATORS:
+
+      Plus Operator:
+         USAGE: Performs an addition operation on its two expression operands.
+         EXAMPLE: x + y
+
+      Minus Operator:
+         USAGE: Performs a subtraction operation on its two expression operands.
+         EXAMPLE: x - y
+
+      Multiply Operator:
+         USAGE: Performs a multiplication operation on its two expression operands.
+         EXAMPLE: x * y
+
+      Division Operator:
+         USAGE: Performs a division operation on its two expression operands.
+         EXAMPLE: x / y
+
+      Modulus Operator:
+         USAGE: Performs a modulo operation on its two expression operands.
+         EXAMPLE: x % y
+
+      Exponent Operator:
+         USAGE: Performs an exponent operation on its two expression arguments, with the first as the base and the second as the index.
+         EXAMPLE: power(x, 2)
+
+   EQUATIONS:
+
+      Equals Equation:
+         USAGE: Checks if its two expressions are equal to each other.
+         EXAMPLE: x == y
+
+      Not Equals Equation:
+         USAGE: Checks if its two expressions are not equal to each other.
+         EXAMPLE: x != y
+
+      Less Than Equation:
+         USAGE: Checks if its two expressions are equal to each other.
+         EXAMPLE: x < y
+
+      More Than Equation:
+         USAGE: Checks if its two expressions are equal to each other.
+         EXAMPLE: x > y
+
+      Less Than Equals Equation:
+         USAGE: Checks if its two expressions are at most equal to each other.
+         EXAMPLE: x <= y
+
+      More Than Equals Equation:
+         USAGE: Checks if its two expressions are at least equal to each other.
+         EXAMPLE: x >= y
+
+
+
+STATEMENTS:
+
+   Assignment Statement:
+      USAGE: Assigns a specified value to a variable identifier.
+      EXAMPLE: var sum = 5;
+
+   CONDITIONALS:
+
+      If Statement:
+         USAGE: Attempts to validate the statement's condition, executing its enclosed body phrase if successful.
+         EXAMPLE:
+	    if (x == 1) {
+	        var x += 1;
+	    }
+
+      Elif Statement:
+	 NOTE:  Must be placed after an if or elif statement.
+         USAGE: Attempts to validate the statement's condition if its preceding conditional failed, executing its
+		enclosed body phrase if successful.
+         EXAMPLE:
+	    elif (x == 1) {
+	        var x += 1;
+	    }
+
+      Else Statement:
+	 NOTE:  Must be placed after an if or elif statement.
+         USAGE: Runs its enclosed body phrase if its preceding conditional failed.
+         EXAMPLE:
+	    else {
+	        var x += 1;
+	    }
+
+   LOOPS:
+      While Loop:
+         USAGE: Repeatedly checks its condition, then runs its enclosed body phrase, until its condition is no longer satisfied.
+         EXAMPLE:
+	    while (x < 0) {
+	        var x += 1;
+	    }
+
+      For Loop:
+	 NOTE:  All indexes of its header array must resolve to integers or floats.
+         USAGE: Loops through its enclosed phrase body once for every index of the header array, updating its header variable from the array on every pass.
+         EXAMPLE:
+	    for (var i = [1, 2, 3, 4, 5]) {
+	        var x += i;
+	    }
+
+	 NOTE:  Both the start and end bound must be integers or floats.
+         USAGE: Loops through its enclosed phrase body, updating its header variable from the start to the end bound (inclusive).
+	 EXAMPLE:
+	    while (var i = 1...5) {
+	        var x += 1;
+	    }
+
+   Method Definition:
+	USAGE: Defines a new method with an argument list and a method body.
+	EXAMPLE:
+	   def sum(var x, var y) {
+	       return x + y;
+	   }
+
+   Method Call
+	NOTE:  Methods can only be called after their method definition.
+	       Method calls can also be used as expressions.
+	USAGE: Calls a predefined method.
+	EXAMPLE: sum(5, 2);

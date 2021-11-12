@@ -1,0 +1,25 @@
+def sum(var x, var y) {
+    return x + y;
+};
+
+
+def factorial(var n) {
+    var sum = 1;
+    for (var i = 1...n) {
+        var sum = sum * i;
+    };
+    return sum;
+};
+
+var sum = 5;
+for (var i = [1, 2, 3, 4, 5]) {
+    var sum = sum(sum, factorial(i));
+};
+
+var i = 1;
+while (sum == 0) {
+    var sum = sum * power(2, i);
+    var i = i + 1;
+};
+
+return sum;

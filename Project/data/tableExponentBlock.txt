@@ -1,0 +1,23 @@
+STATE 13
+Comma = s15
+
+OPENING STATE 1
+Operator = g3
+ExponentOperator = r1
+Power = s7
+
+STATE 11
+Expression = s13
+
+STATE 3
+EndOfFile = a
+
+STATE 7
+BracketLeft = s11
+
+STATE 17
+BracketRight = r2
+
+STATE 15
+Expression = s17
+

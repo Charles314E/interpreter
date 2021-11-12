@@ -1,0 +1,14 @@
+STATE 3
+EndOfFile = a
+
+STATE 11
+Expression = r2
+
+OPENING STATE 1
+Expression = s7
+Equation = g3
+GreaterThanOrEqualsStatement = r1
+
+STATE 7
+GreaterThanOrEquals = s11
+

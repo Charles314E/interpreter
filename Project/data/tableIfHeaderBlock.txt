@@ -1,0 +1,28 @@
+STATE 7
+CurlyBracketLeft = s15
+EnclosedPhrase = r3
+
+OPENING STATE 1
+IfStatement = r2
+IfHeader = g7
+Statement = g3
+If = s9
+
+STATE 15
+Phrase = s19
+
+STATE 17
+Equation = s21
+
+STATE 19
+CurlyBracketRight = r1
+
+STATE 9
+BracketLeft = s17
+
+STATE 3
+EndOfFile = a
+
+STATE 21
+BracketRight = r4
+

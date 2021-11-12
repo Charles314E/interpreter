@@ -1,0 +1,48 @@
+NOTE: '¥' represents an escaped character.
+
+LEXICAL ID		: REGULAR EXPRESSION										: ACCEPTED INPUT
+
+WHITESPACE		: [\t ]*											: ' ', '	', etc.
+IDENTIFIER		: [[a-z][A-Z]][[a-z][A-Z][_][0-9]]*								: a50, x, y1, sum, etc.
+INTEGER			: [[¥-][ε]][0-9][0-9]*										: 50, -10, 420, etc.
+REAL			: [[¥-][ε]][0-9][0-9]*[.][0-9][0-9]*								: 50.0, 0.1, .01, 1.0, etc.
+NULL			: null												: null
+BOOLEAN			: (true)|(false)										: true, false
+STRING			: ['][[0-9][a-z][A-Z][ ][¥-][¥*][¥|][¥(][¥)][¥[][¥]][¥{][¥}][¥?][!£$%^&:;@~#.,+=_/<>]]*[']	: 'Hello World!', "THIS. IS. SPARTA!", etc.
+NEW_LINE		: @n												: 
+IF			: (if)|(IF)											: if, IF
+ELSE_IF			: (elif)|(ELIF)											: elif, ELIF
+ELSE			: (else)|(ELSE)											: else, ELSE
+FOR			: (for)|(FOR)											: for, FOR
+WHILE			: (while)|(WHILE)										: while, WHILE
+DEFINITION		: (def)|(DEF)											: def, DEF
+VAR			: (var)|(VAR)											: var, VAR
+RETURN			: (return)|(RETURN)										: return, RETURN
+TO			: ...												: ...
+ASSIGN			: =												: =
+EQUALS			: ==												: ==
+NOT_EQUALS		: !=												: !=
+LESS_THAN		: <												: <
+GREATER_THAN		: >												: >
+LESS_THAN_EQUALS	: <=												: <=
+GREATER_THAN_EQUALS	: >=												: >=
+AND			: (and)|(AND)											: and, AND
+OR			: (or)|(OR)											: or, OR
+NOT			: (not)|(NOT)											: not, NOT
+IN			: (in)|(IN)											: in, IN								
+PLUS			: +												: +
+MINUS			: ¥-												: -
+MULTIPLY		: ¥*												: *
+DIVIDE			: /												: /
+POWER			: power|POWER											: power, POWER
+MODULUS			: %												: %
+LEFT_BRACKET		: ¥(												: (
+RIGHT_BRACKET		: ¥)												: )
+LEFT_SQUARE_BRACKET	: ¥[												: [
+RIGHT_SQUARE_BRACKET	: ¥]												: ]
+LEFT_CURLY_BRACKET	: ¥{												: {
+RIGHT_CURLY_BRACKET	: ¥}												: }
+COMMA			: ,												: ,
+DOT			: .												: .
+COLON			: :												: :
+SEMICOLON		: ;												: ;

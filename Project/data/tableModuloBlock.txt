@@ -1,0 +1,14 @@
+STATE 11
+Expression = r2
+
+OPENING STATE 1
+Operator = g3
+Expression = s7
+ModulusOperator = r1
+
+STATE 3
+EndOfFile = a
+
+STATE 7
+Modulus = s11
+

@@ -1,0 +1,14 @@
+STATE 11
+Expression = r2
+
+STATE 3
+EndOfFile = a
+
+STATE 7
+NotEquals = s11
+
+OPENING STATE 1
+Expression = s7
+Equation = g3
+NotEqualsStatement = r1
+

@@ -1,0 +1,7 @@
+OPENING STATE 1
+Operator = r1
+Expression = g3
+
+STATE 3
+EndOfFile = a
+

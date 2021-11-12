@@ -1,0 +1,29 @@
+STATE 25
+BracketRight = r4
+
+STATE 23
+CurlyBracketRight = r1
+
+STATE 13
+BracketLeft = s21
+
+STATE 3
+EndOfFile = a
+
+OPENING STATE 1
+Statement = g3
+LoopStatement = r2
+While = s13
+WhileHeader = g11
+WhileLoop = r5
+
+STATE 19
+Phrase = s23
+
+STATE 11
+CurlyBracketLeft = s19
+EnclosedPhrase = r3
+
+STATE 21
+Equation = s25
+

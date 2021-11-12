@@ -1,0 +1,20 @@
+STATE 28
+Variable = r3
+Identifier = r5
+Expression = r2
+List = r1
+Name = r4
+
+STATE 12
+Comma = s28
+
+STATE 3
+EndOfFile = a
+
+OPENING STATE 1
+Variable = r3
+Identifier = r5
+Expression = g3
+List = g12, r1
+Name = r4
+

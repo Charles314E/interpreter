@@ -1,0 +1,5 @@
+var a = 5;
+if (5 == a) {
+    return 5 * power(5, 2) + a;
+};
+return false;

@@ -1,0 +1,14 @@
+STATE 3
+EndOfFile = a
+
+STATE 11
+EndOfFile = a
+BracketRight = r1
+
+OPENING STATE 1
+Expression = g3
+BracketLeft = s5
+
+STATE 5
+Expression = g11
+
